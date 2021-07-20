@@ -1,0 +1,78 @@
+<html lang="RU">
+<head>
+    <link rel="stylesheet" href="css/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="main">
+<div class="menu-button"></div>
+<div class="menu">
+    <div class="menu-top">
+        <a class="logo" href="#">
+            <img class="logo__img" src="img/ico/D.svg">
+            <span class="logo__text">Дмитрий</span>
+        </a>
+        <span class="menu-top__text">Web Developer</span>
+    </div>
+    <nav class="menu-nav">
+        <a class="menu-nav__item" href="#">Обо мне</a>
+        <a class="menu-nav__item" href="#">Мои навыки</a>
+        <a class="menu-nav__item" href="#">Мои работы</a>
+        <a class="menu-nav__item" href="#">Контакты</a>
+    </nav>
+</div>
+<div class="content">
+<span class="tag tag-top">&lt;html&gt;</span>
+    <section class="section">
+        <div class="section-col section-col-s">
+            <h2 class="section-col__title">Немного обо мне</h2>
+            <p class="section-col__text">
+                Я серьезно увлечен веб-разработкой. Мне очень интересно, что скрывается от глаз пользователя и как это
+                работает. В данный момент мое внимание устремлено в сторону Back-end. Но в ходе создания своих приложений,
+                очень часто сталкиваюсь с Front-end разработкой, что также вызывает у меня определенный интерес.<br><br>
+                Хорошо организованный человек с вниманием к деталям. Пытаюсь развиваться во всех сферах своей жизни.
+                Любитель активного отдыха и высокотехнологичных видов спорта таких, как формула 1.<br><br>
+                Интересует весь спектр Back-end разработки. Буду рад работать над интересным проектом с позитивными людьми.
+                Отсутсвие знаний в какой-либо области компенсирую быстрым обучением.
+            </p>
+        </div>
+        <div class="section-col tags">
+            <div id="myCanvasContainer">
+                <canvas width="500" height="500" id="myCanvas">
+                    <a href="">Python</a>
+                    <a href="">Django</a>
+                    <a href="">CSS</a>
+                    <a href="">JS</a>
+                    <a href="">HTML</a>
+                    <a href="">Postgresql</a>
+                    <a href="">jQuery</a>
+                    <a href="">JSON</a>
+                    <a href="">Linux</a>
+                    <a href="">Git</a>
+                    <a href="">Photoshop</a>
+                </canvas>
+            </div>
+        </div>
+    </section>
+    <span class="tag tag-bottom">&lt;/html&gt;</span>
+</div>
+<script src="js/tagcanvas.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  window.onload = function() {
+    try {
+      TagCanvas.Start('myCanvas', '', {
+          textColour: '#08fdd8',
+          minSpeed: .003,
+          initial: [.8, 0.3],
+          maxSpeed: .015,
+          noSelect: true,
+          wheelZoom: false
+      });
+    } catch(e) {
+      // something went wrong, hide the canvas container
+      document.getElementById('myCanvasContainer').style.display = 'none';
+    }
+  };
+</script>
+<script src="js/menuButton.js" type="text/javascript"></script>
+</body>
+</html>

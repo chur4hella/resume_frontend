@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+a{
+    text-decoration: none;
+    color: #909096;
+}
+.menu-button{
+    display: none;
+}
+.link{
+    color: #08fdd8;
+    transition: color .3s;
+}
+.link:hover{
+    color: #019e86;
+}
+.main{
+    margin: 0;
+    padding-left: 132px;
+    font-family: "Open Sans",sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
+    box-sizing: border-box;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 132px;
+    height: 100vh;
+    background-color: #181818;
+}
+.menu-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding: 30px 0;
+}
+.menu-top__text{
+    color: #909096;
+    font-size: 12px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+}
+.logo__text{
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.menu-nav{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #282828;
+}
+.menu-nav__item{
+    text-align: center;
+    font-size: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid #282828;
+    transition: color .3s;
+}
+.menu-nav__item:hover{
+    color: #08fdd8;
+}
+.content{
+    position: relative;
+}
+.tag,
+.tag-bottom,
+.section-col__title::before,
+.section-col__title::after,
+.section-col__text::after,
+.section-col__text::before{
+    position: absolute;
+    font-family: 'La Belle Aurore';
+    font-size: 18px;
+    font-weight: 300;
+    color: #515152;
+}
+.section-col__title::before{
+    content: '<h2>';
+}
+.section-col__title::after{
+    content: '</h2>';
+}
+.tag-top{
+    top: 30px;
+    left: 30px;
+}
+.tag-top::after{
+    content: '<body>';
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+}
+.tag-bottom{
+    left: 30px;
+    bottom: 30px;
+}
+.tag-bottom::before{
+    content: '</body>';
+    position: absolute;
+    left: 10px;
+    top: -30px;
+}
+.section{
+    display: flex;
+    position: relative;
+    padding: 90px 30px 100px;
+    overflow: hidden;
+}
+.section-col{
+    width: 50%;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.section-col-s{
+    width: 40%;
+}
+.section-col__title{
+    position: relative;
+    font-size: 60px;
+    color: #08fdd8;
+}
+.section-col__title::before,
+.section-col__title::after,
+.section-col__text::after,
+.section-col__text::before{
+    left: -10px;
+}
+.section-col__title::after,
+.section-col__text::after{
+    bottom: -30px;
+}
+.section-col__title::before,
+.section-col__text::before{
+    top: -30px;
+}
+.section-col__text{
+    position: relative;
+    font-size: 16px;
+}
+.section-col__text::before{
+    content: '<p>';
+}
+.section-col__text::after{
+    content: '</p>';
+}
+.tags{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#myCanvas{
+    width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+    .menu{
+        display: none;
+    }
+    .menu_active{
+        display: block;
+        z-index: 99;
+        width: 100%;
+    }
+    .main{
+        padding: 0;
+    }
+    .menu-button{
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, .85);
+        z-index: 100;
+    }
+    .menu-button::after,
+    .menu-button::before{
+        position: absolute;
+        content: '';
+        left: 50%;
+        margin-left: -15px;
+        background-color: #fff;
+        width: 30px;
+        height: 4px;
+        transition: transform .3s;
+    }
+    .menu-button::after{
+        top: 35%;
+    }
+    .menu-button::before{
+        bottom: 35%;
+    }
+    .menu-button_active::after{
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -2px;
+    }
+    .menu-button_active::before{
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-bottom: -2px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .section{
+        flex-direction: column;
+    }
+    .section-col{
+        width: 100%;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .section-col__title{
+        font-size: 48px;
+    }
+    #myCanvasContainer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .tag-top{
+        top: 10px;
+        left: 10px;
+    }
+    .tag-top::after,
+    .tag-bottom::before{
+        left: 0;
+    }
+    .section-col{
+        padding: 0;
+    }
+    .section-col__title{
+        font-size: 36px;
+    }
+    .section-col__text{
+        font-size: 14px;
+    }
+    .tag-bottom{
+        left: 10px;
+        bottom: 10px;
+    }
+}
